@@ -1,0 +1,10 @@
+img {
+    border-radius: 60%;
+    width: 25%;
+}
+
+#repos {
+    flex-direction: column;
+    display: flex;
+}
+

@@ -22,8 +22,9 @@ fetch('https://api.github.com/users/WilkinsJay', {
     let locationDiv = document.createElement('p')
     locationDiv.innerText = `Location: ${data.location}`
     
-    let urlDiv = document.createElement ('p')
+    let urlDiv = document.createElement ('a')
     urlDiv.innerText = `GitHub URL: ${data.url}`
+    urlDiv.href = data.url
 
     let loginDiv = document.createElement('p')
     loginDiv.innerText = `GitHub username: ${data.login}`
@@ -45,7 +46,7 @@ fetch('https://api.github.com/users/WilkinsJay/repos', {
 
     for (let repository of repos) {
         let repositoryDiv = document.createElement('a')
-        repositoryDiv.href = repository.url
+        repositoryDiv.href = repository.html_url
         repositoryDiv.innerText = repository.name
         reposDiv.append(repositoryDiv)
     }
